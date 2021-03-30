@@ -35,6 +35,12 @@ public:
 	string setToString(float val) { return to_string(val); }
 	string setToString(char* val);
 
+	// converting string to integer
+	int strToInt(string);
+
+	// getting exponential of a base
+	double getNumberPower(int base, int expo);
+
 private:
 	string buff;
 	word *head,*tail;

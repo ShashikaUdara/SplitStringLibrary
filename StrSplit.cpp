@@ -17,8 +17,7 @@ word *StrSplit :: splitByToken(string buffer, char tok)
 		}
 		else
 		{
-			// should add to the string pack
-			cout<<"String ele: "<<rBuff<<endl;
+			// add to the string pack
 			setPackWord(rBuff);
 			rBuff = "";
 		}
@@ -114,4 +113,30 @@ string StrSplit ::setToString(char* val)
 		rStr += val[i];
 
 	return rStr;
+}
+
+int StrSplit :: strToInt(string buff)
+{
+	int i, iRet = 0;
+	int iter = buff.length();
+
+	for(i=iter; i>0; i--)
+		iRet += ((int)buff[iter - i] - 48) * getNumberPower(10,i-1);
+
+	return iRet;
+}
+
+double StrSplit :: getNumberPower(int base, int expo)
+{
+    int i, tempVal = 1;
+    double dRet = 1;
+
+
+    if(expo < 0)
+    	return -1;
+
+    for(i=0; i<expo; i++)
+    	dRet = dRet * base;
+
+    return dRet;
 }

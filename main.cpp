@@ -33,5 +33,9 @@ int main()
 	string s = sp.setToString(cStr);
 	cout<<s<<endl;
 
+	cout<<"12345678 to integer: "<<sp.strToInt("12345678")<<endl;
+
+	// cout<<"10 to the power of 1: "<<sp.getNumberPower(10, 1)<<endl;
+
 	return 0;
 }	
