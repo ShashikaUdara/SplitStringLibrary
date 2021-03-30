@@ -94,12 +94,24 @@ string StrSplit :: pickString(string buffer, int s, int e)
 	{
 		tBuff += buffer[s+i];
 	}
-	// rBuff = removeSpaces(tBuff);
+
 	return tBuff;
 }
 
-// string StrSplit :: removeSpaces(string str)
-// {
-// 	str.erase(remove(str.begin(), str.end(), ''), str.end());
-// 	return str;
-// }
+string StrSplit ::setToString(char* val)
+{
+	int i;
+	int count = 0;
+	do
+	{
+		count++;
+	}
+	while(val[count] != '\0');
+
+	string rStr;
+
+	for (i=0; i < count; i++)
+		rStr += val[i];
+
+	return rStr;
+}

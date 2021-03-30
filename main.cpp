@@ -14,5 +14,24 @@ int main()
 		cout<<w->data<<endl;
 		w = w->next;
 	}
+
+	// converting following values to strings
+	// integer 1234 to string
+	cout<<sp.setToString(1234)<<endl;
+
+	// double 12345.45678 to string
+	cout<<sp.setToString(12345.45678)<<endl;;
+
+	// float 0.234 to string
+	cout<<sp.setToString(0.234)<<endl;
+
+	char cStr[] = "char array will be converterd in to a String";
+	
+	int sSize = sizeof(cStr)/sizeof(char);
+	cout<<sSize<<endl;
+
+	string s = sp.setToString(cStr);
+	cout<<s<<endl;
+
 	return 0;
 }	

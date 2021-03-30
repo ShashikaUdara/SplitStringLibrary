@@ -1,6 +1,7 @@
 #ifndef STRSPLIT_H
 #define STRSPLIT_H
 
+#include <iostream>
 #include <string>
 #include <tuple>
 
@@ -27,6 +28,12 @@ public:
 
 	void setPackWord(string);
 	string pickString(string, int, int);
+
+	// convert integers/doubles/floats to strings
+	string setToString(int val) { return to_string(val); }
+	string setToString(double val) { return to_string(val); }
+	string setToString(float val) { return to_string(val); }
+	string setToString(char* val);
 
 private:
 	string buff;
