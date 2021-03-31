@@ -38,6 +38,9 @@ public:
 	// converting string to integer
 	int strToInt(string);
 
+	// converting string to double
+	double strToDuble(string);
+
 	// getting exponential of a base
 	double getNumberPower(int base, int expo);
 

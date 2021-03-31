@@ -126,6 +126,35 @@ int StrSplit :: strToInt(string buff)
 	return iRet;
 }
 
+double StrSplit :: strToDuble(string buff)
+{
+	int i, desPoint = 0;
+	int iter = buff.length();
+	int iterDesOff;
+	double dRet = 0;
+
+	string buffDesOff;
+
+	for(i=0; i<iter; i++)
+	{
+		if(buff[i] != '.')
+		{
+			buffDesOff += buff[i];
+		}
+		else
+		{
+			desPoint++;
+		}
+	}
+
+	iterDesOff = buffDesOff.length();
+
+	for(i=iterDesOff; i>0; i--)
+		dRet += ((int)buffDesOff[iterDesOff - i] - 48) * getNumberPower(10,i-1);
+
+	return dRet/getNumberPower(10, desPoint);
+}
+
 double StrSplit :: getNumberPower(int base, int expo)
 {
     int i, tempVal = 1;
